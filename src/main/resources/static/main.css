@@ -5,111 +5,215 @@
 body {
     font-size: 14px;
     margin: 0;
-    font-family: 'Inter', sans-serif;
 }
 
-.container {
+.v82_22 {
     width: 100%;
     height: 1820px;
     background: rgba(255, 255, 255, 1);
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
     overflow: hidden;
 }
 
-.background-1, .background-2, .background-3 {
-    position: absolute;
+.v82_24 {
     width: 100%;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-}
-
-.background-1 {
-    height: 870px;
-    background: url("../images/v82_27.png");
-    top: 8px;
-}
-
-.background-2 {
-    height: 898px;
-    background: url("../images/v82_31.png");
-    top: 163px;
-}
-
-.background-3 {
     height: 100%;
-    background: url("../images/v82_24.png");
+    background: url("../images/v82_24.png") no-repeat center center / cover;
+    position: absolute;
     top: 740px;
 }
 
-.header {
+.v82_27 {
+    width: 100%;
+    height: 870px;
+    background: url("../images/v82_27.png") no-repeat center center / cover;
+    position: absolute;
+    top: 8px;
+    left: 7px;
+}
+
+.v82_31 {
+    width: 100%;
+    height: 898px;
+    background: url("../images/v82_31.png") no-repeat center center / cover;
+    position: absolute;
+    top: 163px;
+}
+
+.v82_33 {
+    width: 45px;
+    height: 109px;
+    background: url("../images/v82_33.png") no-repeat center center / cover;
+    position: absolute;
+    top: 557px;
+    left: 1837px;
+}
+
+.v82_34 {
+    width: 45px;
+    height: 109px;
+    background: rgba(255, 255, 255, 1);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.v82_39 {
+    width: 770px;
+    color: rgba(255, 255, 255, 1);
     position: absolute;
     top: 413px;
     left: 233px;
-}
-
-.title {
-    color: rgba(255, 255, 255, 1);
+    font-family: 'Inter', sans-serif;
     font-weight: bold;
     font-size: 120px;
-    text-align: left;
 }
 
-.price {
+.v82_41 {
+    width: 685px;
     color: rgba(31, 16, 16, 1);
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    position: absolute;
+    top: 588px;
+    left: 233px;
+    font-family: 'Inter', sans-serif;
     font-weight: bold;
     font-size: 120px;
-    text-align: left;
 }
 
-.contact-info {
-    position: absolute;
-    top: 1690px;
-    left: 1458px;
-}
-
-.phone {
-    color: rgba(0, 0, 0, 1);
-    font-weight: 100;
-    font-size: 40px;
-}
-
-.order {
-    color: rgba(0, 0, 0, 1);
-    font-weight: bold;
-    font-size: 40px;
-}
-
-.icon-1, .icon-2, .icon-3 {
-    position: absolute;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-}
-
-.icon-1 {
+.v82_59 {
     width: 200px;
     height: 172px;
-    background: url("../images/v82_59.png");
+    background: url("../images/v82_59.png") no-repeat center center / cover;
+    position: absolute;
     top: 1576px;
     left: 895px;
 }
 
-.icon-2 {
+.v82_62 {
     width: 200px;
     height: 190px;
-    background: url("../images/v82_62.png");
+    background: url("../images/v82_62.png") no-repeat center center / cover;
+    position: absolute;
     top: 1572px;
     left: 1110px;
 }
 
-.icon-3 {
+.v82_65 {
+    width: 103px;
+    height: 101px;
+    background: url("../images/v82_65.png") no-repeat center center / cover;
+    position: absolute;
+    top: 1662px;
+    left: 1340px;
+}
+
+.v82_67 {
+    width: 412px;
+    color: rgba(0, 0, 0, 1);
+    position: absolute;
+    top: 1690px;
+    left: 1458px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 100;
+    font-size: 40px;
+}
+
+.v82_72 {
+    width: 115px;
+    height: 113px;
+    background: url("../images/v82_72.png") no-repeat center center / cover;
+    position: absolute;
+    top: 25px;
+    left: 1755px;
+}
+
+.v82_75 {
+    width: 501px;
+    height: 106px;
+    background: rgba(255, 192, 203, 1);
+    position: absolute;
+    top: 25px;
+    left: 1095px;
+    border-radius: 30px;
+}
+
+.v82_77 {
+    width: 269px;
+    color: rgba(0, 0, 0, 1);
+    position: absolute;
+    top: 54px;
+    left: 1198px;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.v82_80 {
     width: 83px;
     height: 73px;
-    background: url("../images/v82_80.png");
+    background: url("../images/v82_80.png") no-repeat center center / cover;
+    position: absolute;
     top: 58px;
     left: 1431px;
     border-radius: 25px;
     transform: rotate(-20deg);
+}
+
+/* Медиа-запросы для адаптации на ноутбуках */
+@media (max-width: 1024px) {
+    .v82_22 {
+        height: auto; /* Высота автоматически подстраивается */
+    }
+
+    .v82_24 {
+        top: 60%; /* Перемещаем элемент выше */
+    }
+
+    .v82_27 {
+        height: 60%; /* Уменьшаем высоту */
+    }
+
+    .v82_31 {
+        height: 60%; /* Уменьшаем высоту */
+    }
+
+    .v82_39 {
+        font-size: 80px; /* Уменьшаем размер шрифта */
+        left: 10%; /* Перемещаем влево */
+    }
+
+    .v82_41 {
+        font-size: 80px; /* Уменьшаем размер шрифта */
+        left: 10%; /* Перемещаем влево */
+    }
+
+    .v82_67 {
+        font-size: 30px; /* Уменьшаем размер шрифта */
+        left: 5%; /* Перемещаем влево */
+    }
+
+    .v82_75 {
+        width: 80%; /* Увеличиваем ширину кнопки */
+        left: 10%; /* Центрируем */
+    }
+
+    .v82_77 {
+        font-size: 30px; /* Уменьшаем размер шрифта */
+        left: 5%; /* Перемещаем влево */
+    }
+
+    /* Настройки для иконок и других элементов */
+    .v82_59,
+    .v82_62,
+    .v82_65 {
+        width: 100px; /* Уменьшаем ширину иконок */
+        height: auto; /* Высота автоматическая для сохранения пропорций */
+    }
+
+    .v82_33 {
+        left: 90%; /* Перемещаем в сторону, чтобы избежать выхода за границы */
+    }
 }
