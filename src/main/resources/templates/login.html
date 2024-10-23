@@ -3,27 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Страница логина</title>
-    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="../static/style.css">
+    <title>Вход</title>
 </head>
 <body>
 <div class="login-container">
-    <div class="logo">
-        <h1>Мой Сервис</h1>
-    </div>
-    <form action="#" method="post">
+    <h2>Вход</h2>
+    <form action="/login" method="post">
         <div class="form-group">
-            <label for="username">login</label>
+            <label for="username">Имя пользователя</label>
             <input type="text" id="username" name="username" required>
         </div>
         <div class="form-group">
-            <label for="password">password</label>
+            <label for="password">Пароль</label>
             <input type="password" id="password" name="password" required>
         </div>
         <button type="submit">Войти</button>
     </form>
-    <p class="message">Забыли пароль? <a href="reset_password.html">Восстановить</a></p>
-    <p class="register">Нет аккаунта? <a href="register.html">Зарегистрироваться</a></p>
+    <p class="message">Нет аккаунта? <a href="/register">Зарегистрироваться</a></p>
 </div>
 </body>
 </html>
