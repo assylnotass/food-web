@@ -1,26 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
-    background-color: #e9ecef;
+    background-color: #f4f7fc;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0;
 }
 
 .login-container {
-    background: white;
-    padding: 30px;
+    background-color: #ffffff;
+    padding: 40px;
     border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    width: 350px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
     text-align: center;
 }
 
 .logo h1 {
     font-size: 24px;
-    color: #007bff;
-    margin-bottom: 20px;
+    color: #333;
+    margin-bottom: 30px;
 }
 
 .form-group {
@@ -30,26 +36,33 @@ body {
 
 label {
     display: block;
+    font-size: 14px;
+    color: #666;
     margin-bottom: 5px;
-    font-weight: bold;
 }
 
-input {
+input[type="text"], input[type="password"] {
     width: 100%;
-    padding: 10px;
-    border: 1px solid #ced4da;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ddd;
     border-radius: 4px;
-    font-size: 14px;
+    outline: none;
+    transition: border 0.3s;
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+    border-color: #007bff;
 }
 
 button {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
+    font-size: 16px;
     background-color: #007bff;
+    color: white;
     border: none;
     border-radius: 4px;
-    color: white;
-    font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s;
 }
@@ -59,8 +72,9 @@ button:hover {
 }
 
 .message, .register {
-    margin-top: 15px;
     font-size: 14px;
+    color: #666;
+    margin-top: 20px;
 }
 
 a {
