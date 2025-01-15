@@ -1,30 +1,143 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" />
-    <link href="../static/main.css" rel="stylesheet" />
-    <title>Токпокки</title>
+    <link rel="stylesheet" href="styles.css">
+    <title>Фастфуд Ресторан</title>
 </head>
-<body>
-<div class="v82_22">
-    <div class="v82_24"></div>
-    <div class="v82_27"></div>
-    <div class="v82_31"></div>
-    <div class="v82_33"></div>
-    <div class="v82_34"></div>
-    <span class="v82_39">ТОКПОККИ</span>
-    <span class="v82_41">ОТ 2500 ₸</span>
-    <div class="v82_59"></div>
-    <div class="v82_62"></div>
-    <div class="v82_65"></div>
-    <span class="v82_67">8-700-000-58-71</span>
-    <div class="v82_72"></div>
-    <div class="v82_75"></div>
-    <span class="v82_77">ЗАКАЗАТЬ</span>
-    <div class="v82_80"></div>
-</div>
-</body>
-</html>
 
+<body>
+    <header id="header">
+        <div class="logo">
+            <img src="https://img.freepik.com/free-vector/illustration-of-fast-food_53876-9228.jpg?size=626&ext=jpg"
+                alt="Логотип" />
+        </div>
+        <nav>
+            <ul>
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="menu.html">Меню</a></li>
+                <li><button id="orderNow">ЗАКАЗАТЬ СЕЙЧАС!</button></li>
+                <li><button id="profileIcon" onclick="toggleProfile()">👤</button></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="slider">
+            <div class="slides">
+                <img src="https://www.chefmarket.ru/blog/wp-content/uploads/2019/05/delicious-burger-e1558527589911.jpg"
+                    alt="Бургер">
+                <img src="https://myastoriya.com.ua/upload/medialibrary/5e5/5e516f176c240d84beba54354fd93dcd.png"
+                    alt="Бургер с салатом">
+                <img src="https://2l-pub.ru/upload/iblock/fd7/fd7d8d9e6830aef90ec95363a82b4486.jpg"
+                    alt="Бургер с картошкой">
+            </div>
+            <div class="slider-buttons">
+                <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+                <button class="next" onclick="changeSlide(1)">&#10095;</button>
+            </div>
+        </section>
+
+        <section class="recommended">
+            <h2>РЕКОМЕНДУЕМ</h2>
+            <div class="recommended-items">
+                <div class="item">
+                    <img src="https://chefrestoran.ru/wp-content/uploads/2018/10/604655519.jpg" alt="Блюдо 1">
+                    <h3>Блюдо 1</h3>
+                    <p>Описание блюда 1.</p>
+                    <button class="add-to-cart" onclick="addToCart('Блюдо 1', '500₽')">500₽</button>
+                </div>
+                <div class="item">
+                    <img src="https://menunedeli.ru/wp-content/uploads/2023/07/4523862E-973D-49D0-BE99-2609DDAA5CF4-scaled.jpeg"
+                        alt="Блюдо 2">
+                    <h3>Блюдо 2</h3>
+                    <p>Описание блюда 2.</p>
+                    <button class="add-to-cart" onclick="addToCart('Блюдо 2', '600₽')">600₽</button>
+                </div>
+                <div class="item">
+                    <img src="https://chefrestoran.ru/wp-content/uploads/2018/10/532869931.jpg" alt="Блюдо 3">
+                    <h3>Блюдо 3</h3>
+                    <p>Описание блюда 3.</p>
+                    <button class="add-to-cart" onclick="addToCart('Блюдо 3', '700₽')">700₽</button>
+                </div>
+                <div class="item">
+                    <img src="https://www.food-service.com.ua/imagenew/other/statti/amerikanskiy_burger.jpg"
+                        alt="Блюдо 4">
+                    <h3>Блюдо 4</h3>
+                    <p>Описание блюда 4.</p>
+                    <button class="add-to-cart" onclick="addToCart('Блюдо 4', '800₽')">800₽</button>
+                </div>
+            </div>
+            <div class="view-all">
+                <button onclick="window.location.href='menu.html'">ПРОСМОТРЕТЬ ВСЕ ПРЕДЛОЖЕНИЯ</button>
+            </div>
+        </section>
+
+        <section class="frames">
+            <div class="frame">
+                <h3>ОСТАВИТЬ ОТЗЫВ</h3>
+                <p>Поделитесь своим мнением о нашем ресторане.</p>
+                <button onclick="window.location.href='reviews.html'">Кнопка</button>
+            </div>
+            <div class="frame">
+                <h3>ПЕРЕЙТИ В МЕНЮ</h3>
+                <p>Посмотрите наши вкусные предложения.</p>
+                <button onclick="window.location.href='menu.html'">Кнопка</button>
+            </div>
+            <div class="frame">
+                <h3>КАРТА ФИЛИАЛОВ</h3>
+                <p>Найдите ближайший филиал к вам.</p>
+                <button onclick="window.location.href='map.html'">Кнопка</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Фастфуд Ресторан. Все права защищены.</p>
+    </footer>
+
+    <script>
+        let slideIndex = 0;
+        showSlide(slideIndex);
+
+        function showSlide(n) {
+            const slides = document.querySelectorAll(".slides img");
+            if (n >= slides.length) { slideIndex = 0; }
+            if (n < 0) { slideIndex = slides.length - 1; }
+            slides.forEach((slide, index) => {
+                slide.style.display = (index === slideIndex) ? "block" : "none";
+            });
+        }
+
+        function changeSlide(n) {
+            slideIndex += n;
+            showSlide(slideIndex);
+        }
+
+        window.addEventListener('scroll', function () {
+            const header = document.getElementById('header');
+            if (window.scrollY > 0) {
+                header.style.backgroundColor = 'rgba(255, 255, 255, 1)'; // Непрозрачный
+            } else {
+                header.style.backgroundColor = 'rgba(255, 255, 255, 0)'; // Полупрозрачный
+            }
+        });
+
+        function toggleProfile() {
+            alert("Открыть окно профиля или входа"); // Здесь вы можете реализовать отображение окна профиля
+        }
+
+        document.getElementById("orderNow").onclick = function () {
+            alert("Открыть окно для заказа еды"); // Здесь вы можете реализовать отображение окна для заказа
+        }
+
+        function addToCart(dish, price) {
+            alert(`${dish} добавлено в корзину по цене ${price}`);
+        }
+    </script>
+</body>
+
+</html>

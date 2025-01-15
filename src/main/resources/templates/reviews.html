@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reviews.css">
+    <title>О нас</title>
+</head>
+
+<body>
+    <header id="header">
+        <div class="logo">
+            <img src="https://img.freepik.com/free-vector/illustration-of-fast-food_53876-9228.jpg?size=626&ext=jpg"
+                alt="Логотип" />
+        </div>
+        <nav>
+            <ul>
+                <li><a href="reviews.html">О нас</a></li>
+                <li><a href="menu.html">Меню</a></li>
+                <li><button id="orderNow">ЗАКАЗАТЬ СЕЙЧАС!</button></li>
+                <li><button id="profileIcon" onclick="toggleProfile()">👤</button></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>ХОТИТЕ ЛИ ВЫ РАБОТАТЬ С НАМИ?</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua.</p>
+
+        <h2>ХОТИТЕ С НАМИ РАБОТАТЬ? ПОДАЙТЕ ЗАЯВКУ ЗДЕСЬ!</h2>
+        <div class="form-container">
+            <form>
+                <label for="fullName">ФИО</label>
+                <input type="text" id="fullName" name="fullName" required>
+
+                <label for="email">Эл. адрес</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Телефон для связи</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="birthDate">Дата рождения</label>
+                <input type="date" id="birthDate" name="birthDate" required>
+
+                <label for="position">Должность</label>
+                <select id="position" name="position" required>
+                    <option value="">Выберите должность</option>
+                    <option value="manager">Менеджер</option>
+                    <option value="cashier">Кассир</option>
+                    <option value="cook">Повар</option>
+                    <option value="cleaner">Уборщик</option>
+                </select>
+
+                <label for="store">Магазин</label>
+                <select id="store" name="store" required>
+                    <option value="">Выберите магазин</option>
+                    <option value="akkala">Akkala Mall</option>
+                    <option value="shopping_center">Торговый центр</option>
+                </select>
+
+                <label for="coverLetter">Сопроводительное письмо</label>
+                <textarea id="coverLetter" name="coverLetter" rows="4" required></textarea>
+
+                <button type="submit">Отправить заявку</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Фастфуд Ресторан. Все права защищены.</p>
+    </footer>
+
+    <script>
+        function toggleProfile() {
+            alert("Открыть окно профиля или входа");
+        }
+
+        document.getElementById("orderNow").onclick = function () {
+            alert("Открыть окно для заказа еды");
+        }
+        window.addEventListener('scroll', function () {
+            const header = document.getElementById('header');
+            if (window.scrollY > 0) {
+                header.classList.add('scrolled'); // Добавляем класс при скролле
+            } else {
+                header.classList.remove('scrolled'); // Убираем класс, когда вверху страницы
+            }
+        });
+
+    </script>
+</body>
+
+</html>
